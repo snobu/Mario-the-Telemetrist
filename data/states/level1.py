@@ -1339,7 +1339,7 @@ class Level1(tools._State):
             self.set_game_info_values()
             self.done = True
             insights.send_event_async('Mario had a short but meaningful career.')
-            eventhub.send_event_async('Mario had a short but meaningful career.')  
+            eventhub.send_event_async('Mario had a short but meaningful career.')
 
 
     def set_game_info_values(self):

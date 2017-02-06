@@ -57,6 +57,7 @@ class Mario(pg.sprite.Sprite):
 
     def setup_forces(self):
         """Sets up forces that affect Mario's velocity"""
+
         self.x_vel = 0
         self.y_vel = 0
         self.max_x_vel = c.MAX_WALK_SPEED
@@ -436,7 +437,6 @@ class Mario(pg.sprite.Sprite):
         """This function is called if Mario is standing still"""
         self.check_to_allow_jump(keys)
         self.check_to_allow_fireball(keys)
-        
         self.frame_index = 0
         self.x_vel = 0
         self.y_vel = 0
