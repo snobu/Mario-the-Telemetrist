@@ -1,5 +1,5 @@
-Telemetrist Mario
-=================
+Mario the Telemetrist
+=====================
 
 ![telemetrist](https://raw.github.com/snobu/Mario-the-Telemetrist/master/telemetrist.png)
 
