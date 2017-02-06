@@ -3,7 +3,8 @@ Mario the Telemetrist
 
 ![telemetrist](https://raw.github.com/snobu/Mario-the-Telemetrist/master/telemetrist.png)
 
-Fork of justinmeister's mesmerising, high fidelity Super Mario Bros made with Pygame.
+Fork of [**justinmeister**](https://github.com/justinmeister/Mario-Level-1)'s mesmerising, high fidelity Super Mario Bros made with Pygame. Original repo here: https://github.com/justinmeister/Mario-Level-1.
+
 Added in code to send telemetry info to Azure Application Insights and Event Hubs.
 
 ### Telemetry setup
