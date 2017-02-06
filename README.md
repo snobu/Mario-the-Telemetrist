@@ -8,7 +8,7 @@ Added in code to send telemetry info to Azure Application Insights and Event Hub
 
 ### Telemetry setup
 
-1. Edit `data/telemetry/eventhub.py`. Fixup these vars:
+1) Edit `data/telemetry/eventhub.py`. Fixup these vars:
 
 ```
 namespace = 'breakingnews'
@@ -16,7 +16,7 @@ eventhubname = 'marioevents'
 sasname = 'send'
 ```
 
-2. Add Application Insights instrumentation key and Event Hub SAS key into:
+2) Add Application Insights instrumentation key and Event Hub SAS key into:
 
 ```
 data/telemetry/key_ai
