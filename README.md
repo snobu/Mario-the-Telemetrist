@@ -1,6 +1,15 @@
-Super Mario Bros Level 1
-=============
+Telemetrist Mario
+=================
 
+![telemetrist](https://raw.github.com/snobu/Mario-the-Telemetrist/master/telemetrist.png)
+
+Fork of justinmeister's mesmerising, high fidelity Super Mario Bros made with Pygame.
+Added in code to send telemetry info to Azure Application Insights and Event Hubs.
+
+Original Description follows:
+
+Super Mario Bros Level 1
+------------------------
 An attempt to recreate the first level of Super Mario Bros.
 
 ![screenshot](https://raw.github.com/justinmeister/Mario-Level-1/master/screenshot.png)
