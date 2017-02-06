@@ -1,10 +1,14 @@
 __author__ = 'justinarmstrong'
 
-
+import traceback
 import pygame as pg
 from .. import setup
 from .. import constants as c
 
+# Application Insights and Event Hubs defs
+#    import from {project_base}/data/telemetry
+from .. telemetry import insights as insights
+from .. telemetry import eventhub as eventhub
 
 class Enemy(pg.sprite.Sprite):
     """Base class for all enemies (Goombas, Koopas, etc.)"""
@@ -156,6 +160,8 @@ class Goomba(Enemy):
 
         if (self.current_time - self.death_timer) > 500:
             self.kill()
+            insights.send_event_async('Mario squashed a Goomba')
+            eventhub.send_event_async('Mario squashed a Goomba')
 
 
 
@@ -186,6 +192,15 @@ class Koopa(Enemy):
         self.rect = self.frames[self.frame_index].get_rect()
         self.rect.x = shell_x
         self.rect.bottom = shell_y
+        insights.send_event_async('Mario jumped on Koopa')
+        eventhub.send_event_async('Mario jumped on Koopa')
+        try:
+            Impossible_Function()
+        except:
+            tb = traceback.format_exc()
+            insights.send_event_async('OH NOES! EXCEPTION OCCURED! -- ' + tb)
+            eventhub.send_event_async('OH NOES! EXCEPTION OCCURED! -- ' + tb)
+            raise Exception('OH NOES! EXCEPTION OCCURED! -- ' + tb)
 
 
     def shell_sliding(self):
@@ -194,22 +209,3 @@ class Koopa(Enemy):
             self.x_vel = 10
         elif self.direction == c.LEFT:
             self.x_vel = -10
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

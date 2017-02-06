@@ -102,6 +102,7 @@ class Coin_box(pg.sprite.Sprite):
 
     def bumped(self):
         """Action after Mario has bumped the box from below"""
+
         self.rect.y += self.y_vel
         self.y_vel += self.gravity
 

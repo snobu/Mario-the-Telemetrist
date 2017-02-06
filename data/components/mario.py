@@ -531,7 +531,7 @@ class Mario(pg.sprite.Sprite):
         """This function is called when Mario is in a walking state
         It changes the frame, checks for holding down the run button,
         checks for a jump, then adjusts the state if necessary"""
-
+        
         self.check_to_allow_jump(keys)
         self.check_to_allow_fireball(keys)
 

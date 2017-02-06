@@ -4,6 +4,10 @@ import pygame as pg
 from .. import constants as c
 from .. import setup
 
+# Application Insights and Event Hubs defs
+#    import from {project_base}/data/telemetry
+from .. telemetry import insights as insights
+from .. telemetry import eventhub as eventhub
 
 class Powerup(pg.sprite.Sprite):
     """Base class for all powerup_group"""
@@ -88,7 +92,8 @@ class Mushroom(Powerup):
     def __init__(self, x, y, name='mushroom'):
         super(Mushroom, self).__init__(x, y)
         self.setup_powerup(x, y, name, self.setup_frames)
-
+        insights.send_event_async('Mario released a shroom')
+        eventhub.send_event_async('Mario released a shroom')
 
     def setup_frames(self):
         """Sets up frame list"""

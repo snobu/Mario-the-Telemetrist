@@ -6,7 +6,7 @@ Mario the Telemetrist
 Fork of justinmeister's mesmerising, high fidelity Super Mario Bros made with Pygame.
 Added in code to send telemetry info to Azure Application Insights and Event Hubs.
 
-Original Description follows:
+Original README follows:
 
 Super Mario Bros Level 1
 ------------------------
@@ -14,16 +14,16 @@ An attempt to recreate the first level of Super Mario Bros.
 
 ![screenshot](https://raw.github.com/justinmeister/Mario-Level-1/master/screenshot.png)
 
-CONTROLS: 
+**CONTROLS:** 
 
 Arrow keys for direction
 
-'a' for jump
+**'a'** for jump
 
-'s' for action (fireball, run)
+**'s'** for action (fireball, run)
 
 
-DEPENDENCIES:
+**DEPENDENCIES:**
 
 Pygame 1.9.1 (Python 2)
 
@@ -33,10 +33,10 @@ To install dependencies for Python 2.x:
 
 	pip install -r requirements.txt
 
-VIDEO DEMO:
+**VIDEO DEMO:**
 
 http://www.youtube.com/watch?v=HBbzYKMfx5Y
    
-DISCLAIMER:
+**DISCLAIMER:**
 
 This project is intended for non-commercial educational purposes.

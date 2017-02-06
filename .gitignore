@@ -1,0 +1,6 @@
+.vs/
+.idea/
+key_*
+*.swp
+*.pyc
+.DS_Store

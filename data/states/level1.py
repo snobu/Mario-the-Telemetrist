@@ -1,5 +1,9 @@
 from __future__ import division
 
+# Application Insights and Event Hubs defs
+#    import from {project_base}/data/telemetry
+from .. telemetry import insights as insights
+from .. telemetry import eventhub as eventhub
 
 import pygame as pg
 from .. import setup, tools
@@ -15,7 +19,6 @@ from .. components import flagpole
 from .. components import info
 from .. components import score
 from .. components import castle_flag
-
 
 class Level1(tools._State):
     def __init__(self):
@@ -746,6 +749,9 @@ class Level1(tools._State):
             if coin_box.state == c.RESTING:
                 if coin_box.contents == c.COIN:
                     self.game_info[c.SCORE] += 200
+                    # Send to "Mario" Application Insights
+                    insights.send_event_async('Mario hit a coin box!')
+                    eventhub.send_event_async('Mario hit a coin box!')
                     coin_box.start_bump(self.moving_score_list)
                     if coin_box.contents == c.COIN:
                         self.game_info[c.COIN_TOTAL] += 1
@@ -1332,6 +1338,8 @@ class Level1(tools._State):
         elif (self.current_time - self.death_timer) > 3000:
             self.set_game_info_values()
             self.done = True
+            insights.send_event_async('Mario had a short but meaningful career.')
+            eventhub.send_event_async('Mario had a short but meaningful career.')  
 
 
     def set_game_info_values(self):
