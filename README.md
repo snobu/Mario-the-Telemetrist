@@ -17,6 +17,8 @@ eventhubname = 'marioevents'
 sasname = 'send'
 ```
 
+`sasname` is the name of a Shared Access Signature with Send permissions.
+
 2) Add Application Insights instrumentation key and Event Hub SAS key into:
 
 ```
