@@ -7,6 +7,16 @@ Fork of [**justinmeister**](https://github.com/justinmeister/Mario-Level-1)'s me
 
 Added in code to send telemetry info to Azure Application Insights and Event Hubs.
 
+
+### DEPENDENCIES
+
+Install these with `pip install package_name`, e.g. `pip install pygame`.
+
+    pygame >= 1.9.1release
+    blessings >= 1.6
+    applicationinsights >= 0.10.0
+    azure-servicebus >= 0.21.0
+
 ### Telemetry setup
 
 1) Edit `data/telemetry/eventhub.py`. Fixup these vars:
