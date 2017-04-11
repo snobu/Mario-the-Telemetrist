@@ -21,7 +21,7 @@ Install these with `pip install package_name`, e.g. `pip install pygame`.
 
 ### Telemetry setup
 
-1) Edit `data/telemetry/eventhub.py`. Fixup these vars:
+#### 1. Edit `data/telemetry/eventhub.py`. Fixup these vars:
 
 ```
 namespace = 'breakingnews'
@@ -31,7 +31,7 @@ sasname = 'send'
 
 `sasname` is the name of a Shared Access Signature with Send permissions.
 
-2) Add Application Insights instrumentation key and Event Hub SAS key into:
+#### 2. Add Application Insights instrumentation key and Event Hub SAS key into:
 
 ```
 data/telemetry/key_ai
