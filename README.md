@@ -11,6 +11,7 @@ Added in code to send telemetry info to Azure Application Insights and Event Hub
 ### DEPENDENCIES
 
 Install these with `pip install package_name`, e.g. `pip install pygame`.
+`pip install -r requirements.txt` should also work, but i didn't test that.
 
     pygame >= 1.9.1release
     blessings >= 1.6
