@@ -1,6 +1,7 @@
 __author__ = 'justinarmstrong'
 
 import traceback
+import sys
 import pygame as pg
 from .. import setup
 from .. import constants as c
@@ -197,10 +198,11 @@ class Koopa(Enemy):
         try:
             Impossible_Function()
         except:
-            tb = traceback.format_exc()
-            insights.send_event_async('OH NOES! EXCEPTION OCCURED! -- ' + tb)
-            eventhub.send_event_async('OH NOES! EXCEPTION OCCURED! -- ' + tb)
-            raise Exception('OH NOES! EXCEPTION OCCURED! -- ' + tb)
+            pretty_tb = traceback.format_exc()
+            type, value, tb = sys.exc_info()
+            insights.send_exception_async(type, str(value) + '\n---\n' + pretty_tb, tb)
+            eventhub.send_event_async('OH NOES! EXCEPTION OCCURED! --\n' + pretty_tb)
+            raise Exception('OH NOES! EXCEPTION OCCURED! --\n' + pretty_tb)
 
 
     def shell_sliding(self):

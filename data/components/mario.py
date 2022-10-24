@@ -940,7 +940,6 @@ class Mario(pg.sprite.Sprite):
         self.rect.bottom = bottom
         self.rect.x = left
 
-
     def flag_pole_sliding(self):
         """State where Mario is sliding down the flag pole"""
         self.state = c.FLAGPOLE

@@ -1,4 +1,4 @@
-pygame==1.9.1release
+pygame==2.0.3
 blessings==1.6
 applicationinsights==0.10.0
 azure-servicebus==0.21.0

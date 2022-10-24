@@ -2,7 +2,7 @@ from azure.servicebus import ServiceBusService
 from threading import Thread
 from blessings import Terminal
 
-namespace = 'breakingnews'
+namespace = 'itsamemario'
 eventhubname = 'marioevents'
 sasname = 'send'
 # Read Event Hub key into sasvalue
